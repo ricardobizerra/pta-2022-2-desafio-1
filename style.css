@@ -1,0 +1,243 @@
+/* Reset */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #FAFAFA;
+}
+
+/* Header */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 114px;
+
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.logo-header{
+    width: 120px;
+}
+
+.search-field{
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+    width: 450px;
+    height: 61px;
+    padding: 8px 16px;
+
+    background: #FFFFFF;
+    border: 0.5px solid rgba(96, 96, 96, 0.3);
+    border-radius: 8px;
+}
+
+.search-input{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    width: 100%;
+
+    color: rgba(96, 96, 96, 0.6);
+    border: none;
+}
+
+/* Cards */
+
+.section-cards{
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    margin-top: 199px;
+    padding: 80px 114px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding: 24px;
+
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+}
+
+.card-img img{
+    width: 100%;
+}
+
+#tablito{
+    grid-area: 1 / 1 / 3 / 1;
+}
+
+#chicabon{
+    grid-area: 1 / 3 / 3 / 4;
+}
+
+.card-info h2{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #292929;
+}
+
+.card-info p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    margin-top: 8px;
+
+    color: #606060;
+}
+
+.card-price{
+    width: fit-content;
+    padding: 8px;
+
+    background: rgba(249, 199, 191, 0.5);
+    border-radius: 8px;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 48px 114px;
+
+    background: #F2F2F2;
+}
+
+.footer-links{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-links a{
+    display: flex;
+    align-items: center;
+}
+
+.footer-links a img{
+    width: 35px;
+}
+
+.logo-footer{
+    width: 60px;
+}
+
+footer p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #292929;
+}
+
+/* Media Queries */
+
+@media (max-width: 799px){
+    
+    /* Header */
+
+    header{
+        padding: 40px 32px 20px;
+    }
+
+    .logo-header{
+        width: 70px;
+    }
+
+    .search-field{
+        width: fit-content;
+    }
+
+    .search-input{
+        display: none;
+    }
+
+    /* Cards */
+
+    .section-cards{
+        gap: 18px;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        margin-top: 129.41px;
+        padding: 32px;
+    }
+
+    .card{
+        padding: 13.26px;
+    }
+
+    #chicabon{
+        grid-area: 3 / 1 / 5 / 1;
+    }
+
+    .card-info h2{
+        font-size: 17.6814px;
+        line-height: 22px;
+    }
+
+    .card-info p{
+        font-size: 8.84068px;
+        line-height: 11px;
+
+        margin-top: 4.5px;
+    }
+
+    .card-price{
+        padding: 4.5px;
+    }
+
+    .card-price p{
+        font-size: 13.261px;
+        line-height: 16px;
+    }
+
+    /* Footer */
+
+    footer{
+        flex-direction: column;
+        padding: 32px;
+    }
+
+    .logo-footer{
+        display: none;
+    }
+
+    footer p{
+        font-size: 12px;
+        line-height: 15px;
+
+        margin-top: 24px;
+    }
+}
